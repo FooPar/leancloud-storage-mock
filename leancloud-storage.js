@@ -10,6 +10,6 @@ AV.Object.prototype.save = jest.fn(() => {
 });
 AV.Query.prototype.find = jest.fn(function() {
   console.log(`AV.Query.find called with ${JSON.stringify(this)} ${JSON.stringify(arguments)}`);
-  return AV.Promise.resolve("yooooo");
+  return AV.Promise.resolve("yoooo");
 });
 export default AV;
