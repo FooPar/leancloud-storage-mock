@@ -12,6 +12,9 @@ AV.Query.prototype.find = jest.fn(function() {
   console.log(`AV.Query.find called with ${JSON.stringify(this)} ${JSON.stringify(arguments)}`);
   return AV.Promise.resolve("yooooo");
 });
+AV.Cloud.run = jest.fn(function(name, parameters) {
+  return AV.Promise.resolve();
+});
 export default AV;
 
 // compare two av objects a and b, and log any discrepancies recursively to
